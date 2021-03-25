@@ -1,11 +1,16 @@
+error[ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)]
 １．管理者としてcmd実行
 ２．C:\Program Files\MySQL\MySQL Server 8.0\bin>に移動
 ３.  C:\Program Files\MySQL\MySQL Server 8.0\bin>が出れば、mysqld --initialize-insecureを入力
 ４．問題なければnet start mysqlでMySQL開始
 
 C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -version
-ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061) <----
+ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
 C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqld --initialize-insecure
 C:\Program Files\MySQL\MySQL Server 8.0\bin>net start mysql
 MySQL サービスを開始します.
 MySQL サービスは正常に開始されました。
+
+error[php artisan migrate ->  Illuminate\Database\QueryException  : SQLSTATE[HY000] [2054] The server reque
+sted authentication method unknown to the client ...]
+mysql> alter user 'root'@'localhost' identified with mysql_native_password by '';
